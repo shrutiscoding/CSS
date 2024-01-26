@@ -1,0 +1,21 @@
+<html>
+    <title>Accessing Field value by 3 ways</title>
+    <body>
+        <form name="f">
+        Enter Username:<input type="text" id="id" name="n" >
+        <input type="button" value="Access Value" onclick="show()">
+        </form>
+        <script>
+            function show()
+            { 
+                i=document.getElementById("id")
+                s=document.forms["f"]["n"]
+                n=document.getElementsByName("n")[0]
+                document.write("Accessing Field Value using 3 ways:")
+                document.write("<br>Using ID:"+i.value)
+                document.write("<br>USing Name:"+n.value)
+                document.write("<br>Using document.forms:"+s.value)
+            }
+        </script>
+    </body>
+</html>

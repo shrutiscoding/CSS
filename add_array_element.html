@@ -1,0 +1,24 @@
+<html>
+    <title>Adding Element at end and at beginning</title>
+    <body>
+        <script>
+            let fruit=["Apple","Orange","Watermelon","Grapes"];
+            let beg=prompt("Enter Element to add first");
+            let end=prompt("Enter Element to add end");
+            document.write("Original Array Elements:<br>");
+            for(let i in fruit){
+                document.write(fruit[i]+"<br>")
+            }
+            fruit.push(end);
+            document.write("<hr>Array elements after push()<br>");
+            for(let i in fruit){
+                document.write(fruit[i]+"<br>")
+            } 
+            fruit.unshift(beg);
+            document.write("<hr>Array elements after unshift()<br>");
+            for(let i in fruit){
+                document.write(fruit[i]+"<br>")
+            }
+        </script>
+    </body>
+</html>

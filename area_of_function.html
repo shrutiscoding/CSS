@@ -1,0 +1,51 @@
+<html>
+    <title>Area of Circle,Triangle,Rectangle and Square</title>
+    <body>
+        <script>
+            let arg1,arg2,result,ch;
+            ch=prompt("1.Area of Triangle\n2.Area of Circle\n3.Area of Square\n4.Area of Rectangle\nEnter Your Choice for area Calculation:",1)
+            switch(ch)
+            {
+                case '1':
+                    arg1=parseFloat(prompt("Enter value of Base:"))
+                    arg2=parseFloat(prompt("Enter value of Height:"))
+                    result=AOT(arg1,arg2)
+                    document.write("Area of Triangle="+result)
+                    break;
+                case '2':
+                    arg1=parseFloat(prompt("Enter value of Radius:"))
+                    result=AOC(arg1)
+                    document.write("Area of Circle="+result)
+                    break;
+                case '3':
+                    arg1=parseFloat(prompt("Enter value of Side:"))
+                    result=AOS(arg1)
+                    document.write("Area of Square="+result)
+                    break;
+                case '4':
+                    arg1=parseFloat(prompt("Enter value of length:"))
+                    arg2=parseFloat(prompt("Enter value of breadth"))
+                    result=AOR(arg1,arg2)
+                    document.write("Area of Rectangle="+result)
+                    break;
+                default:document.write("Please check your choice!!!")
+            }
+            function AOT(b,h)
+            {
+                return 0.5*b*h;
+            }
+            function AOC(r)
+            {
+                return 3.14*r*r;
+            }
+            function AOS(s)
+            {
+                return s*s;
+            }
+            function AOR(l,b)
+            {
+                return l*b;
+            }
+        </script>
+    </body>
+</html>
