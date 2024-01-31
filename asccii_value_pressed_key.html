@@ -1,0 +1,18 @@
+<html>
+    <title>
+        Key pressed ascii code
+    </title>
+    <body>
+        <form>
+            <input type="text" id="ascii" onkeypress="ascci_value()">
+        </form>
+        <script>
+            function ascci_value()
+            {
+                var word=document.getElementById("ascii").value;
+                var n=word.charCodeAt(0);
+                alert("Ascii Code of "+word+" is "+n);
+            }
+        </script>
+    </body>
+</html>

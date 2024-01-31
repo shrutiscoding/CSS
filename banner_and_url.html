@@ -1,0 +1,31 @@
+<html>
+<head>
+<script language="Javascript">
+MyBanners=new Array('b1.jpeg','b2.jpeg','b3.jpeg','b4.jpeg')
+MyBannerLinks=new Array('http://www.vbtutor.net/','http://www.excelvbatutor.com/','http://onlinebizguide4you.com/','http://javascript-tutor.net/')
+banner=0
+function ShowLinks()
+{
+document.location.href="http://www."+MyBannerLinks[banner]
+}
+function ShowBanners()
+{ 
+	if (document.images)
+	{ 
+		banner++;
+		if (banner==MyBanners.length) 
+		{
+			banner=0
+		}
+		document.ChangeBanner.src=MyBanners[banner];
+		setTimeout("ShowBanners()",3000);
+	}
+}
+</script>
+<body onload="ShowBanners()">
+    <center>
+    <a href="javascript: ShowLinks()">
+    <img src="banner.png" width="900" height="120" name="ChangeBanner"/></a>
+    </center>
+    </body>
+    </html>

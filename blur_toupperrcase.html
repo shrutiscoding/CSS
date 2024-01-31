@@ -1,0 +1,18 @@
+<html>
+    <title>
+        Onblur Event for converting Letters to Uppercase
+    </title>
+    <body>
+        <form>
+            <input type="text" onblur="Convert()" id="text">
+        </form>
+        <script>
+        function Convert()
+        {
+            var word=document.getElementById("text").value;
+            var n=word.toUpperCase();
+            alert("Your text in uppercase :"+n)
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <title>Use Of Array methods in one Program</title>
+    <body>
+        <script>
+            let a1=[19,"Shruti","Vijay","Chougale",21440]
+            let a2=[18,"Samiksha","Chavan"]
+            document.write("Elements of Array 1:<br>"+a1);
+            document.write("<br>Elements of Array 2:<br>"+a2)
+            a1.unshift("2112280100");
+            document.write("<br><hr>After Unshift method Array 1 Elements: "+a1)
+            a2.push("21555")
+            document.write("<br><hr>After Push method Array 2 Elements: "+a2)
+            a1.shift()
+            document.write("<br><hr>After Shift method Array 1 Elements: "+a1)
+            a2.pop()
+            document.write("<br><hr>After Pop method Array 2 Elements: "+a2)
+            a1.sort()
+            document.write("<br><hr>After Sort method Array 1 Elements: "+a1)
+            a2.reverse()
+            document.write("<br><hr>After Reverse method Array 2 Elements: "+a2)
+            document.write("<br><hr>After Join method Array 1 Elements: "+a1.join("^"))
+            document.write("<br><hr>After Concat method Array Elements: "+a1.concat(a2))
+            a1.splice(1,1,2112280100);
+            document.write("<br><hr>After Splice method Array 1 Elements: "+a1)
+        </script>
+    </body>
+</html>

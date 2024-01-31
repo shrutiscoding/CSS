@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Example</title>
+</head>
+<body>
+  <button id="myButton">Click Me</button>
+  
+  <script>
+    const button = document.getElementById('myButton');
+    
+    button.textContent = "New Text";
+    button.disabled = true;
+    
+    button.onclick = function() {
+      alert("Button Clicked!");
+    };
+    
+    // Simulate a click on the button programmatically
+    button.click();
+  </script>
+</body>
+</html>

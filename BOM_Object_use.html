@@ -1,0 +1,84 @@
+<html>
+    <head><title>Use of BOM Object</title>
+        <h1><center><p id="demo">Hello Everyone!!</p></center></h1>
+        <center>
+          <button onclick="shownav()">window.navigator</button>
+          <button onclick="showscr()">window.screen</button>
+          <button onclick="showhistBack()">window.historyBack</button>
+          <button onclick="showhistFor()">window.historyForward</button>
+          <button onclick="showloc()">window.location</button>
+          <button onclick="showdoc()">window.documents</button>
+          </center>
+    </head>
+    <body>
+        <script>
+            var demo=document.getElementById("demo");
+           function shownav()
+           {
+             var v=navigator.appVersion
+             var n=navigator.appName
+             var o=navigator.platform
+             var u=navigator.userAgent
+             document.write("<h1>Navigator Object Example</h1>");
+             document.write("<br><br><b>Browser Version:</b>"+v);
+             document.write("<br><b>Browser Name:</b>"+n);
+             document.write("<br><b>Operating System:</b>"+o);
+             document.write("<br><b>User-Agent:</b>"+u);
+           }
+           function showscr()
+           {
+            var w=window.screen.width
+            var h=window.screen.height
+            var cd=window.screen.colorDepth
+            var pd=window.screen.pixelDepth
+            document.write("<h1>Screen Object Example</h1>")
+            document.write("<br><br><b>Screen Width:</b>"+w)
+            document.write("<br><b>Screen Height:</b>"+h)
+            document.write("<br><b>Screen Color Depth:</b>"+cd)
+            document.write("<br><b>Screen Pixel Depth:</b>"+pd)
+           }
+           function showhistBack()
+           {
+            document.write("<h1>Back History Object Example</h1>"+history.length)
+            document.write(window.history.back());
+           }
+           function showhistFor()
+           {
+             document.write("<h1>Forward History Object Example</h1>"+history.length)
+             document.write(window.history.forward());
+           }
+           function showloc()
+           {
+            var c=window.location.href
+            var hn=window.location.hostname
+            var pn=window.location.pathname
+            var p=window.location.protocol
+            document.write("<h1>Location Object Example</h1>")
+            document.write("<br><br><b>Current URL:</b>"+c)
+            document.write("<br><b>Host Name:</b>"+hn)
+            document.write("<br><b>Path Name:</b>"+pn)
+            document.write("<br><b>Protocol:</b>"+p)
+            document.write("<br><b>Origin:</b>"+window.location.origin)
+            document.write("<br><input type='button' onclick='reload()' value='Reload Website'>");
+            document.write("<br><input type='button' onclick='assign()' value='Assign Website'>");
+            document.write("<br><input type='button' onclick='replace()' value='Replace Website'>");
+       }
+       function reload()
+       {
+        window.location.reload("BOM_Object_use.html")
+       }
+       function assign()
+       {
+        window.location.assign("BOM_Object_use.html")
+       }
+       function replace()
+       {
+        window.location.replace("banner.html")
+       }
+           function showdoc()
+           {
+            demo.textContent="This is Use of All BOM Objects";
+           }
+        </script>
+    </body>
+</html>
