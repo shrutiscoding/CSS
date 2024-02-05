@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function updateadd() {
+            var list1 = document.forms.myform.list1;
+            var list2 = document.forms.myform.list2;
+            var list3 = document.forms.myform.list3;
+            var selectedValue = list1.options[list1.selectedIndex].value;
+            
+            // Clear the select lists
+            list2.length = 0; 
+            list3.length = 0; 
+            
+            if (selectedValue === "India") {
+                list2.options[0] = new Option("Maharashtra", "Maharashtra");
+                list2.options[1] = new Option("Kerala", "Kerala");
+                list2.options[2] = new Option("Rajasthan", "Rajasthan");
+            } 
+            else if (selectedValue === "US") {
+                list2.options[0] = new Option("California", "California");
+                list2.options[1] = new Option("Hawaii", "Hawaii");
+                list2.options[2] = new Option("New York", "New York");
+            } 
+            else if (selectedValue === "South Korea") {
+                list2.options[0] = new Option("Busan", "Busan");
+                list2.options[1] = new Option("Chungcheongbuk-do", "Chungcheongbuk-do");
+                list2.options[2] = new Option("Chungcheongnam-do", "Chungcheongnam-do");
+            }
+        }
+
+        function change() {
+            var list2 = document.forms.myform.list2;
+            var list3 = document.forms.myform.list3;
+            var selectedValue = list2.options[list2.selectedIndex].value;
+            
+            // Clear the third select list
+            list3.length = 0; 
+            
+            if (selectedValue === "Maharashtra") {
+                list3.options[0] = new Option("Mumbai", "Mumbai");
+                list3.options[1] = new Option("Pune", "Pune");
+                list3.options[2] = new Option("Kolhapur", "Kolhapur");
+            }
+             else if (selectedValue === "Kerala") {
+                list3.options[0] = new Option("Kochi", "Kochi");
+                list3.options[1] = new Option("Thiruvananthapuram", "Thiruvananthapuram");
+                list3.options[2] = new Option("Kozhikode", "Kozhikode");
+            }
+            else if (selectedValue === "Rajasthan") {
+                list3.options[0] = new Option("Jaipur", "Jaipur");
+                list3.options[1] = new Option("Jodhpur", "Jodhpur");
+                list3.options[2] = new Option("Udaipur", "Udaipur");
+            }
+            else if(selectedValue==="California")
+            {
+                list3.options[0] = new Option("Los Angeles", "Los Angeles");
+                list3.options[1] = new Option("Glendale", "Glendale");
+                list3.options[2] = new Option("Orange", "Orange");
+            }
+            else if(selectedValue==="Hawaii")
+            {
+                list3.options[0] = new Option("Kauai", "Kauai");
+                list3.options[1] = new Option("Hilo", "Hilo");
+                list3.options[2] = new Option("Lanai", "Lanai");
+            }
+            else if(selectedValue==="New York")
+            {
+                list3.options[0] = new Option("Rechester", "Rechester");
+                list3.options[1] = new Option("Rome", "Rome");
+                list3.options[2] = new Option("Olean", "Olean");
+            }
+            else if(selectedValue==="Busan")
+            {
+                list3.options[0] = new Option("Nam-gu", "Nam-gu");
+                list3.options[1] = new Option("Haeundae-gu", "Haeundae-gu");
+                list3.options[2] = new Option("Dongnae-gu", "Dongnae-gu");
+            }
+            else if(selectedValue==="Chungcheongbuk-do")
+            {
+                list3.options[0] = new Option("Cheongju", "Cheongju");
+                list3.options[1] = new Option("Chungju", "Chungju");
+                list3.options[2] = new Option("Jecheon", "Jecheon");
+            }
+            else if(selectedValue==="Chungcheongnam-do")
+            {
+                list3.options[0] = new Option("Cheonan", "Cheonan");
+                list3.options[1] = new Option("Asan", "Asan");
+                list3.options[2] = new Option("Seosan", "Seosan");
+            }
+        }
+
+        function check() {
+            var list1 = document.forms.myform.list1;
+            var list2 = document.forms.myform.list2;
+            var list3 = document.forms.myform.list3;
+            var selectedCountry = list1.options[list1.selectedIndex].text;
+            var selectedState = list2.options[list2.selectedIndex].text;
+            var selectedCity = list3.options[list3.selectedIndex].text;
+
+            document.getElementById("demo").innerHTML = "Your address is " + selectedCountry + ", " + selectedState + ", " + selectedCity;
+        }
+    </script>
+</head>
+<body>
+<form name="myform">
+        <select name="list1" size="3" onclick="updateadd()">
+        <option id="l11" value="India">India</option>
+        <option id="l12" value="US">US</option>
+        <option id="l13" value="South Korea">South Korea</option>
+    </select><br>
+    <select name="list2" size="3" onclick="change()"></select><br>
+    <select name="list3" size="3"></select><br>
+    <input type="button" onclick="check()" value="Display">
+    <p id="demo"></p>
+</form>
+</body>
+</html>

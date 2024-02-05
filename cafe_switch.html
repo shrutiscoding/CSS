@@ -1,0 +1,51 @@
+<html>
+<body>
+<script>
+let selections=[];
+var bill=0;
+document.write("<h2><u>Shruti's Cafe</u></h2><hr>");
+   do
+   {
+    alert("Order Process is Loading !!!!");
+     var item=prompt("Enter Which Item You Want To Order :\n1.Pizza\n2.Burger\n3.French Fries\n4.Sandwich");
+
+       switch(item)
+       {
+	case '1':	
+          var pi=prompt("Enter no. items you want")	;
+          var price=100*pi;
+          document.write("<br>Item Name : Pizza"+"    "+pi+"  "+price);
+          break
+	case '2':
+          var bur=prompt("Enter no. items you want")	;
+          var price=60*bur;
+          document.write("<br>Item Name : Burger"+"   "+bur+" "+price)	
+          break
+	case '3':	
+          var ff=prompt("Enter no. items you want")	;	
+          var price=60*ff;
+          document.write("<br>Item Name : French Fries"+" "+ff+" "+price)
+          break
+  case '4':	
+          var sw=prompt("Enter no. items you want")	;	
+          var price=60*sw;
+          document.write("<br>Item Name :Sandwich"+" "+sw+" "+price)
+          break
+	default:
+          document.write("Sorry The Item Is Not Available")
+        }
+        bill=bill+price;
+     let choice=prompt("Do You Want Continue") ;
+     if(choice=='yes'){
+continue;
+}
+else{
+  document.write("<hr>");
+  document.write("<br>Your Total Bill :"+bill);
+break;
+}
+}while(item<5);
+document.write("<br><br>Thanks For Visiting!!!");
+</script>   
+</body>  
+</html>

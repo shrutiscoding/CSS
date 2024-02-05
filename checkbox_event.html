@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Checkbox Events
+        </title>
+    </head>
+    <body>
+         <h2>Checkbox Event</h2>  
+         <p>
+            Check or uncheck the Checkbox given below:
+         </p> 
+         <input type="checkbox" id="check" onclick="check_or_uncheck(this)">Check
+         <script>
+            function check_or_uncheck(checkbox)
+            {
+                if(checkbox.checked==true)
+                {
+                    alert("Checkbox is checked!");
+                }
+                else
+                {
+                    alert("Checkbox is unchecked!");
+                }
+            }
+         </script>
+    </body>
+</html>

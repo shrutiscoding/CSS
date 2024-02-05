@@ -1,0 +1,29 @@
+<html>
+    <head><center><h1>Select City</h1></center></head>
+        <script>
+            function optioncity(select)
+            {
+                var a=select.selectedIndex;
+                var fav =select.options[a].value
+                
+                if(fav!=null)
+                {
+                    document.write("Your Selected City is<b> "+fav+"</b>");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            List of Cities:
+            <select name="city">
+                <option value="Kolhapur" >Kolhapur</option>
+                <option value="Tasgaon" >Tasgaon</option>
+                <option value="Vita" >Vita</option>
+                <option value="Peth Vadgaon">Peth Vadgaon</option>
+                <option value="Valivade" >Valivade</option>
+            </select>
+            <input type="button" value="select" onclick="optioncity(this.form.city)">
+        </form>
+    </body>
+</html>

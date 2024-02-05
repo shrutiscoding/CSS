@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Changing Values </title>
+    </head>
+    <body style="text-align: left;" id="body">
+        <h1 id="h1" style="color:pink;">Welcome to Javascript</h1>
+        <p id="first" style="font-size: 15px; font-weight: bold;"></p>
+        <button onclick="show()">Click Me</button>
+        <p id="second" style="font-size: 20px; font-weight: bold; color: red;"></p>
+        <script>
+                 var p1=document.getElementById("first");
+                 var p2=document.getElementById("second");
+                 var h=document.getElementById("h1");
+                 p1.innerHTML="Click on button to change style attribute."
+                 function show()
+                 {
+                    h.style["background"]="blue";
+                    h.style["color"]="white";
+                    p2.innerHTML="Style Attribute changed"
+                 }
+        </script>
+    </body>
+</html>

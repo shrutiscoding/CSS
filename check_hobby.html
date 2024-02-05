@@ -1,0 +1,46 @@
+<html>
+    <title>Hobby Display</title>
+    <body>
+        <form>
+            <label>Choose Hobbies from following</label><br><br>
+            <input type="checkbox" id="c1"/>Singing<br>
+            <input type="checkbox" id="c2"/>Dancing<br>
+            <input type="checkbox" id="c3"/>Reading<br>
+            <input type="checkbox" id="c4"/>Drawing<br>
+            <input type="checkbox" id="c5"/>Swimmimg<br>
+            <input type="button" onclick="check_hobby()" value="Check"/>
+        </form>
+        <script>
+            function check_hobby()
+            {
+                var result=""
+                h1=document.getElementById("c1")
+                h2=document.getElementById("c2")
+                h3=document.getElementById("c3")
+                h4=document.getElementById("c4")
+                h5=document.getElementById("c5")
+                if(h1.checked==true)
+                {
+                    result+=" Singing "
+                }
+                if(h2.checked==true)
+                {
+                    result=result+" Dancing "
+                }
+                if(h3.checked==true)
+                {
+                    result=result+" Reading "
+                }
+                if(h4.checked==true)
+                {
+                    result=result+" Drawing "
+                }
+                if(h5.checked==true)
+                {
+                    result=result+" Swimmimg "
+                }
+                document.write("Your Hobbies are: "+result)
+            }
+        </script>
+    </body>
+</html>

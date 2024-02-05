@@ -1,0 +1,60 @@
+<html>
+    <title>Cookies</title>
+    <body>
+        <select name="list"size=3 id="color">
+            <option value="Red">Red</option>
+            <option value="Orange">Orange</option>
+            <option value="Pink">Pink</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green">Green</option>
+        </select>
+        <br>
+        <input type="button" value="Set Cookie" onclick="SetCookie()">
+        <input type="button" value="Get Cookie" onclick="GetCookie()">
+        <input type="button" value="Delete Cookie" onclick="DeleteCookie()">
+        <script>
+            function SetCookie()
+            {
+                var list=document.getElementById("color").value;
+                document.cookie="Color="+ list+";max-age=10";
+              if(list=="Red")
+              {
+                document.bgColor="red";
+              }
+              if(list=="Orange")
+              {
+                document.bgColor="orange";
+              }
+              if(list=="Pink")
+              {
+                document.bgColor="pink";
+              }
+              if(list=="Yellow")
+              {
+                document.bgColor="yellow";
+              }
+              if(list=="Green")
+              {
+                document.bgColor="green";
+              }
+            }
+            
+            function GetCookie()
+            {
+                if(document.cookie.length!=0)
+                {
+                    alert("Your cookie is:"+document.cookie);
+                }
+                else
+                {
+                    alert("Cookie is not available!!!")
+                }
+            }
+            function DeleteCookie()
+            {
+                alert("Your cookie is deleted!!!")
+                document.bgColor="white";
+            }
+        </script>
+    </body>
+</html>

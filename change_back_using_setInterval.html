@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<title>Using setInterval change background image</title>
+<body>
+<img src="download.jpeg" id="back" height="600" width="1350">
+  <script>
+    const images = [
+      'download.jpeg',
+      'download1.jpeg',
+      'download2.jpeg',
+      'download3.jpeg'
+    ];
+
+    let currentIndex = 0;
+
+    function changeBackgroundImage() 
+    {
+       back=document.getElementById("back")
+       back.src=images[currentIndex]
+       currentIndex=currentIndex+1; 
+       if(currentIndex==images.length)
+       currentIndex=0
+    }
+
+
+    setInterval(changeBackgroundImage, 5000);
+    changeBackgroundImage();
+  </script>
+</body>
+</html>

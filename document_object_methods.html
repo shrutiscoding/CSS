@@ -1,0 +1,40 @@
+<html>
+    <title>document object methods</title>
+    <head>
+        <p id="id" class="class">
+            Hello Everyone!!!
+        </p>
+        <p class="class2">Hello!!</p>
+        Enter Name=<input type="text" name="cust"><input type="button" value="Showing Cookie" onclick="showcookie()">
+    </head>
+    <body>
+        <script>
+            var getid=document.getElementById("id").textContent
+            var gettag=document.getElementsByTagName("p")[0].textContent
+            var getclass=document.getElementsByClassName("class")
+
+            var newElement=document.createElement("p")
+            newElement.textContent="This is use of createElement() method"
+            newElement.id="id2"
+            document.getElementById("id").appendChild(newElement)
+
+            document.write("<br><br>Using Document.write we are printing following:")
+            document.write("<br>Using getElementById() :"+getid)
+            document.write("<br>Using getElementByTagName() :"+gettag)
+            document.write("<br>USing getElementByClassName():"+getclass.length)
+            document.write("<br>Using createElement():"+document.getElementById("id2").textContent)
+
+            function showcookie()
+            {
+                if(document.myform.cust.value==="")
+                {
+                    alert("Enter some value....")
+                }
+                let cval=escape(document.myform.cust.value)+";";
+                document.cookie="name:"+cval;
+                document.write("Setting Cookies!!!<br>")
+                document.write("Name:"+cval)
+            }
+        </script>
+    </body>
+</html>

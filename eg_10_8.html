@@ -1,0 +1,26 @@
+<html>
+    <title>For Each Loop Example</title>
+    <head>For Each calls function for each element in array</head>
+    <body>
+        <p>
+            Compute the sum of values in Array
+        </p>
+        <script>
+            let sum=0;
+            const num=[5,8,95,52];
+            document.write("<ul>");
+            num.forEach(listDisp);
+            document.write("</ul>");
+            document.write("Sum of Array=")
+            document.write("<p id='demo'>");
+            document.write("</p>");
+            function listDisp(item)
+            {
+                document.write("<li>"+item+"</li>");
+                sum+=item;
+                //return sum;
+            }
+            document.getElementById("demo").innerHTML=sum;
+        </script>
+    </body>
+</html>

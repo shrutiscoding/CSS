@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type ="text/javascript">
+function EnableFunction()
+{
+document.forms.myform.name.disabled=false
+}
+function DisableFunction()
+{
+document.forms.myform.name.disabled=true
+}
+</script>
+</head>
+<body>
+<form name="myform">
+ Username:<input type="text" name="name"/>
+ <br/> <br/>
+ <input type="button" value="Disable Name Field" onclick="DisableFunction()"/>
+ <br/><br/>
+ <input type="button" value="Enable Name Field" onclick="EnableFunction()"/>
+ </form> </body> </html>

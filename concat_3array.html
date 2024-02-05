@@ -1,0 +1,27 @@
+<html>
+    <title>Joining of 3 array Usng Concat</title>
+    <body>
+        <script>
+            let arr1=[1,2,3];
+            let arr2=[4,5,6]
+            let arr3=[7,8,9]
+            document.write("Original First Array Elements:<br>")
+            for(let i in arr1)
+            {
+                document.write(arr1[i]+"<br>");
+            }
+            document.write("Original Second Array Elements:<br>")
+            for(let i in arr2)
+            {
+                document.write(arr2[i]+"<br>");
+            }
+            document.write("Original Third Array Elements:<br>")
+            for(let i in arr3)
+            {
+                document.write(arr3[i]+"<br>");
+            }
+            document.write("Concatenation of Array1 , Array2 and Array3 as Follows:<br>");
+            document.write(arr1.concat(arr2,arr3));
+        </script>
+    </body>
+</html>

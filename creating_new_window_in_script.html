@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function win()
+            {
+                var newwin=window.open("new window","","width=250,height=250")
+                newwin.document.write("<html>")
+                newwin.document.write("<head>")
+                newwin.document.write("<title>")
+                newwin.document.write("JS Website")
+                newwin.document.write("</title>")
+                newwin.document.write("</head>")
+                newwin.document.write("<body>")
+                newwin.document.write("<h1>Welcome to new page !!!</h1>")
+                newwin.document.write("</body>")
+                newwin.document.write("<html>")
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="New Window" onclick="win()">
+    </body>
+</html>

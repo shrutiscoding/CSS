@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>Font Manipulation</title>
+</head>
+<body>
+    <p id="myParagraph">This is a sample paragraph.</p>
+    <button id="changeButton">Click me</button>
+
+    <script>
+        // Function to change font size and font color of the paragraph
+        function changeFont() {
+            
+            const paragraph = document.getElementById('myParagraph');
+            const button = document.getElementById('changeButton');
+            if(document.getElementById("changeButton").textContent=="Change Font Size")
+            {
+            const currentSize = parseInt(getComputedStyle(paragraph).fontSize);
+            const newSize = currentSize + 2;
+            paragraph.style.fontSize = newSize + 'px';
+            }
+            if(document.getElementById("changeButton").textContent=="Change Font Color")
+            {
+            const colors = ['red', 'blue', 'green', 'orange', 'purple', 'pink']
+            const currentColor = paragraph.style.color;
+            const currentIndex = colors.indexOf(currentColor);
+
+            const newColorIndex = (currentIndex + 1) % colors.length;
+            const newColor = colors[newColorIndex];
+            paragraph.style.color = newColor;
+            }
+            const buttonTexts = ['Change Font Size', 'Change Font Color', 'Click Me'];
+            const newButtonText = buttonTexts[Math.floor(Math.random() * buttonTexts.length)];
+            button.textContent = newButtonText;
+        }
+
+        // Add a click event listener to the button
+        const button = document.getElementById('changeButton');
+        button.addEventListener('click', changeFont);
+    </script>
+</body>
+</html>
