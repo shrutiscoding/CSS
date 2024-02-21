@@ -1,0 +1,19 @@
+<html>
+    <title>Use of Match Function</title>
+    <body>
+        <script>
+            document.write("<h1><center>Use of Match Function</center></h1>")
+            var mystr="Hello ABC"
+            var reg=/\bABC\b/
+            var match=mystr.match(reg)
+            document.write("<br>"+match);
+
+            mystr="Good Morning ABC.Good Morning PQR"
+            document.write("<br>"+mystr)
+            reg=/[\w\s\.\s]+/i
+            match=mystr.match(reg)
+            document.write("<br>Output \w\s:"+match);
+
+        </script>
+    </body>
+</html>

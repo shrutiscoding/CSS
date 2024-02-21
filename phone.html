@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function check(mob)
+            {
+                var reg=/^[0-9]{3}[-/]+[0-9]{4}[-/]+[0-9]{4}$/
+                if(reg.test(mob))
+                {
+                    alert("valid")
+                }
+                else{
+                    alert("wrong")
+                }
+            }
+            var mob=prompt("Enter mobile number")
+            check(mob)
+        </script>
+    </head>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+</head>
+<body>
+
+<h1>Login</h1>
+
+<form id="Login">
+
+  Enter Username:<input type="text" name="username" ><br><br>
+  
+  Enter Password:<input type="password" name="password" ><br><br>
+  
+  <input type="button" onclick="signin()" value="Sign In">
+</form>
+
+<script>
+  function signin()
+  {
+    document.write("UserName:"+Login.username.value+"<br><br>Password:"+Login.password.value)
+  }
+ </script>
+
+</body>
+</html>

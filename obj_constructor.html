@@ -1,0 +1,18 @@
+<html>
+    <title>Creating Object Using Constructor Example</title>
+    <body>
+        <script>
+        function emp(id,name,salary)
+        {
+            this.id=id;
+            this.name=name;
+            this.salary=salary;
+        }
+        id=prompt("Enter ID");
+        name=prompt("Enter Name");
+        salary=prompt("Enter Salary");
+        e=new emp(id,name,salary);
+        document.write("Employee Details=" +e.id+" "+e.name+" "+e.salary);
+      </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <title>Open and Close method</title>
+    <body>
+        <input type="button" onclick="openwindow()" value="Open Window">
+        <input type="button" onclick="closewindow()" value="Close Window">
+        <script>
+            var wd;
+            function openwindow()
+            {
+                wd=window.open("radio.html","New Window",'toolbar=1,menubar=1,height=200,width=300')
+            }
+            function closewindow()
+            {
+                wd.close();
+            }
+        </script>
+    </body>
+</html>

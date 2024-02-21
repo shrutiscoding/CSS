@@ -1,0 +1,35 @@
+<html>
+  <title>Student Marks</title>
+  <head><h2>Grade Of Student</h2></head>
+  <body><script>
+         var stud=[["Shruti",90],["Samiksha",80],["Sneha",78],["Samruddhi",76]];
+	 var a=0;
+	 for (var i=0;i<stud.length;i++)
+	 {
+	  a+=stud[i][1];
+         }
+         var avg=a/stud.length;
+         document.write("Average:"+avg+"<br>");
+	 if(avg<60)
+	 {
+	   document.write("Grade E");
+	 }
+	 else if(avg<70)
+	 {
+	   document.write("Grade D");
+	 }
+         else if(avg<=80)
+	 {
+	   document.write("Grade C");
+	 }
+         else if(avg<=90)
+	 {
+	   document.write("Grade B");
+	 }
+         elseif(avg<=100)
+	 {
+	   document.write("Grade A");
+	 }
+        </script>
+  </body>
+</html>

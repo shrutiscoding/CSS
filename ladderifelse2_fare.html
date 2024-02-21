@@ -1,0 +1,27 @@
+<html>
+    <title>Fare according to vehicleType</title>
+    <body bgcolor="violet">
+        <script>
+          var fare =0.0;
+          var distanceInKilometers=parseFloat(prompt("Enter Distance in Kilometer"));
+          var vehicleType=prompt("Enter Vehicle Type");
+           // Example formula: fare = base fare + distance * per kilometer rate
+        if (vehicleType==("car")) {
+            fare = 50.0 + distanceInKilometers * 10.0;
+            document.write("Fare of Car :"+fare);
+           } 
+        else if (vehicleType==("bike")) {
+             fare = 20.0 + distanceInKilometers * 5.0;
+             document.write("Fare of Bike :"+fare);
+            } 
+        else if (vehicleType==("scooter")) {
+            fare = 30.0 + distanceInKilometers * 8.0;
+            document.write("Fare of Scooter :"+fare);
+        } 
+        else {
+            document.write("Invalid Vehicle Type fare :"+fare);
+        }
+        </script>
+
+    </body>
+</html>

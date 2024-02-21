@@ -1,0 +1,22 @@
+<html>
+    <head><script>
+        function palindrome(str)
+        {
+            length=str.length;
+            var str1="";
+            for(j=length-1;j>=0;j--)
+                {
+                    str1+=str[j];
+                }
+            if(str==str1)
+            {
+                return "String is Palindrome";
+            }
+            else{
+                return "STring is not palindrome"
+            }
+        }
+        result=palindrome(prompt("Enter any String",0));
+        document.write(result)
+    </script></head>
+</html>

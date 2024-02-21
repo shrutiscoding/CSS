@@ -1,0 +1,47 @@
+<html>
+    <title>Program of Fibonanci and Factorial </title>
+    <head>
+        <input type="button" value="Factorial" onclick="factorial(n)"/>
+        <input type="button" value="Fibonanci" onclick="fibonnaci(n)"/>
+
+    </head>
+    <body>
+        <script>
+         var n;
+        function factorial(n)
+        {
+            n=parseInt(prompt("Enter any Number:"))
+            document.write("Factorial of "+n+"=");
+            let answer=1;
+            if(n==0||n==1)
+            {
+                document.write( answer);
+            }
+            else if(n>1)
+            {
+                for(let i=n;i>=1;i--)
+                {
+                    answer=answer*i;
+                }
+                document.write( answer);
+            }
+            else{
+                document.write("Number Should be Positive !!");
+            }
+        }
+        function fibonnaci(n)
+        {
+            n=parseInt(prompt("Enter any Number:"))
+            document.write("Fibonnaci Series of "+n+"=");
+            let n1=0,n2=1,next;
+            for(let i=1;i<=n;i++)
+            {
+                document.write("<br>"+n1)
+                next=n1+n2
+                n1=n2
+                n2=next
+            }
+        }
+        </script>
+    </body>
+</html>

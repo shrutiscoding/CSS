@@ -1,0 +1,21 @@
+<html>
+    <title>Getter and Setter Method Example</title>
+    <body>
+        <script>
+            let emp={fname:"Shruti",
+                     get getName()
+                     {
+                       return this.fname;
+                     },
+                     set changeName(newName){
+                       this.fname=newName;
+                     }
+                     
+                    };
+            document.write(emp.getName);
+            document.write("<br>")
+            emp.changeName="Shreesha";
+            document.write(emp.getName);
+        </script>
+    </body>
+</html>

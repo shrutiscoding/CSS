@@ -1,0 +1,18 @@
+<html>
+    <title>Match Regular Expression</title>
+    <body>
+        <script>
+            function myfunc()
+            {
+                var str="Good Morning"
+                var reg=(/Morning/i);
+                n=str.match(reg)
+                document.write("Morning :"+n+"<br>")
+
+                n=str.match(/morning/)
+                document.write("morning :"+n+"<br>")
+            }
+            myfunc()
+        </script>
+    </body>
+</html>

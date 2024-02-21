@@ -1,0 +1,18 @@
+<html>
+    <title>Creating Object using object.create() method</title>
+    <body><script>
+        const person={fname:prompt("Enter First Name"),
+                      lname:prompt("Enter Last Name"),
+                      age:prompt("Enter Age"),
+                    print:function()
+                {
+                    document.write(this.fname+"<br>");
+                }
+            }
+            const obj1=Object.create(person);
+            obj1.print();
+            const obj2=Object.create(person);
+            obj2.fname="Shraddha";
+            obj2.print();
+    </script></body>
+</html>

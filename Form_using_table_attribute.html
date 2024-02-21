@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2><center>Registration Form</center></h2>
+    <form id="register">
+        <center>
+    <table>
+        <tr>
+            <td><label for="firstName">First Name:</label></td>
+            <td><input type="text" id="firstName"></td>
+        </tr>
+        <tr>
+            <td><label for="lastName">Last Name:</label></td>
+            <td><input type="text" id="lastName"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email"></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password:</label></td>
+            <td><input type="password" id="password"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="registerButton">Register</button></td>
+        </tr>
+    </table>
+</center>
+</form>
+    <script>
+        // JavaScript code to handle form submission
+        document.getElementById("registerButton").addEventListener("click", function () {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            if(firstName=="" | lastName=="" | email=="" | password=="")
+            {
+                alert("Enter all details !!")
+            }
+            else
+            {
+             alert("Registration successful!\n\nFirst Name: " + firstName + "\nLast Name: " + lastName + "\nEmail: " + email);
+            }
+            document.getElementById("register").reset();
+
+        });
+    </script>
+</body>
+</html>

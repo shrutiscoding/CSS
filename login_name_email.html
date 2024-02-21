@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+</head>
+<body>
+
+<h1>Login</h1>
+
+<form id="Login">
+
+  Enter Username: <input type="text" name="username"><br><br>
+  
+  Enter Email: <input type="email" name="email"><br><br>
+  
+  <input type="button" onclick="validate()" value="Submit">
+</form>
+
+<script>
+  function validate() {
+    
+    var username = Login.username.value;
+    var email = Login.email.value;
+
+    if (username === "" && email === "") {
+        alert("Please check the Username and Email !!");
+    } else if (!isValidEmail(email)) {
+        alert("Check Email Address");
+    } else {
+        alert("Submitted Successfully !!");
+    }
+  }
+
+  function isValidEmail(email) {
+    var emailPattern = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$/;
+    return emailPattern.test(email);
+  }
+</script>
+
+</body>
+</html>

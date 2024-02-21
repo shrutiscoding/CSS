@@ -1,0 +1,32 @@
+<html>
+    <title>Using all types of variable Declaration</title>
+    <body><h1 style="font-family: 'Gill Sans'">Using All Types Of Variables Program</h1>
+        <p style="font-family:'Courier New'" >
+
+        <script>
+// Declaring different types of variables
+const numVariable = 100;           // Number
+let strVariable = "Hello";      // String
+let boolVariable = true;        // Boolean
+let arrVariable = [1, 2, 3];    // Array
+const pi=3.142;
+var objVariable = {             // Object
+  name: "Shruti",
+  age: 19,
+  isStudent: true
+};
+
+// Displaying the values of variables
+ document.write("<hr><b>Number Variable:</b>", numVariable);
+document.write("<hr><b><br>String Variable:</b>", strVariable);
+document.write("<hr><b><br>Boolean Variable:</b>", boolVariable);
+document.write("<hr><b><br>Array Variable:</b>", arrVariable);
+document.write("<hr><b><br>Constant Variable:</b>", pi);
+document.write("<hr><b><br>Object Variable:<br></b>");
+for(let x in objVariable)
+        {
+            document.write(objVariable[x]+"<br>");
+        }
+        </script></p>
+    </body>
+</html>

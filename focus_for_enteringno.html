@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Input Validation</title>
+</head>
+<body>
+
+<label for="numberInput">Enter a number:</label>
+<input type="text" id="numberInput" onfocus="validateInput()">
+
+<script>
+function validateInput() {
+  const inputElement = document.getElementById("numberInput");
+  inputElement.addEventListener("input", function() {
+    const inputValue = inputElement.value;
+    const isNumber = /^\d+$/.test(inputValue);
+    
+    if (!isNumber) {
+      alert("Please enter numbers only.");
+      inputElement.value = "";
+    }
+  });
+}
+</script>
+
+</body>
+</html>

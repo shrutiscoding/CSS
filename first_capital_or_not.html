@@ -1,0 +1,25 @@
+<html>
+    <title>
+        Onblur Event for checking first letter is capital or not
+    </title>
+    <body>
+        <form>
+            <input type="text" onblur="Check()" id="text">
+        </form>
+        <script>
+        function Check()
+        {
+            var word=document.getElementById("text").value;
+            var n=word.charCodeAt(0);
+            if(n>=65 && n<=90)
+                {
+                    alert("First Letter is Capital in this Textbox")
+                }
+            else{
+                alert("Please Check the String !!")
+                document.getElementById("text").value=null
+            }
+        }
+    </script>
+    </body>
+</html>

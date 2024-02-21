@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Forms</title>
+</head>
+<body>
+    <h1>Multiple Forms Example</h1>
+
+    <form id="form1">
+        <h2>Form 1</h2>
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1" name="input1"><br><br>
+        <label for="subject">Subjects</label><br>
+        <input type="checkbox"value="C++">C++<br>
+        <input type="checkbox" value="C">C<br>
+        <input type="checkbox" value="Java">Java<br>
+        <input type="checkbox" value="Python">Python<br>
+        <input type="submit">Submit Form 1</button>
+    </form>
+   <hr>
+    <form id="form2">
+        <h2>Form 2</h2>
+        <label for="input2">Input 2:</label>
+        <input type="text" id="input2" name="input2"><br><br>
+        <input type="submit">Submit Form 2</button>
+    </form>
+    <hr>
+    <form id="form3">
+        <h2>Form 3</h2>
+        <label for="input3">Input 3:</label>
+        <input type="text" id="input3" name="input3"><br><br>
+        <label for="gender">Gender</label><br>
+        <input type="radio">Female<br>
+        <input type="radio">Male<br>
+        <input type="radio">Other<br>
+        <input type="submit">Submit Form 3</button>
+    </form>
+    <hr>
+    <script>
+        const forms = document.getElementsByTagName('form');
+        const numberOfForms = forms.length;
+        document.write("<br><br>Number of forms available: "+numberOfForms);
+
+        for (let i = 0; i < forms.length; i++) {
+            const form = forms[i];
+            const formId = form.id;
+            const formLength = form.elements.length;
+            document.write("<br>Form "+(i+1)+"ID:"+formId +" has "+formLength+" elements.");
+        }
+    </script>
+</body>
+</html>

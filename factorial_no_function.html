@@ -1,0 +1,29 @@
+<html>
+    <title>Fibonnaci Series Using Function</title>
+    <body>
+        <script>
+            function factorial(n)
+            {
+                let answer=1;
+                if(n==0||n==1)
+                {
+                    return answer;
+                }
+                else if(n>1)
+                {
+                    for(let i=n;i>=1;i--)
+                    {
+                        answer=answer*i;
+                    }
+                    return answer;
+                }
+                else{
+                    return "Number Should be Positive !!"
+                }
+            }
+            let n=parseInt(prompt("Enter any Number:"))
+            answer=factorial(n);
+            document.write("Factorial of "+n+"="+answer);
+        </script>
+    </body>
+</html>

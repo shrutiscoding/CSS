@@ -1,0 +1,23 @@
+<html>
+    <title>Check Number present or not in input if contain convert to String</title>
+    <body>
+        <script>// Get user input
+            const userInput = prompt("Enter a string or number:");
+            
+            // Function to check if a string contains a number
+            function containsNumber(userInput) {
+              return /\d/.test(userInput);
+            }
+            
+            // Check if the user input contains a number
+            if (containsNumber(userInput)) {
+              // If it contains a number, convert it to a string
+              const convertedString = String(userInput);
+              document.write("Input converted to string: "+convertedString);
+            } else {
+              // If it doesn't contain a number, simply display the input as is
+             document.write("Input is not a number: "+userInput);
+            }
+            </script>
+    </body>
+</html>

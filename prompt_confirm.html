@@ -1,0 +1,19 @@
+<html>
+    <title>Confirm and Prompt</title>
+    <body>
+        <input type="button" value="Confirm" onclick="Confirm()">
+        <input type="button" value="Prompt" onclick="Prompt()">
+        <script>
+            function Confirm()
+            {
+                r=confirm("You want to press button?");
+            }
+            function Prompt()
+            {
+                var n=prompt("Enter a number for calculating square:",0)
+                var s=n*n;
+                alert("Square of "+n+" ="+s)
+            }
+        </script>
+    </body>
+</html>
