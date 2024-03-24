@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            MyBooks=new Array('ajp.jpeg','css.jpeg','vb.jpeg')
+            book=0
+            function ShowCover(book)
+            {
+                document.DisplayBook.src=MyBooks[book]
+            }
+        </script>
+    </head>
+        <body>
+        <P align="center"><img src="ajp.jpeg" name="DisplayBook"/><p>
+        <center>
+            <table border=0>
+                <tr>
+                    <td align=center>
+                        <a onmouseover="ShowCover(0)"><b>Advance Java</b></a><br><br>
+                        <a onmouseover="ShowCover(1)"><b>Client Side Scripting Language</b></a><br><br>
+                        <a onmouseover="ShowCover(2)"><b>VB.Net</b></a><br>
+                    </td>
+                </tr>
+            </table>
+        </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <title>Reading Cookie</title>
+    <body>
+        <script>
+            function ReadCK()
+            {
+                document.cookie="Name=Shruti;";
+                var allcookies=document.cookie;
+                document.write("All Cookies="+"<br>"+allcookies)
+                document.write("<br>");
+
+                //Get all cookies in pair  in an array
+                var c_array=allcookies.split(';');
+
+                //Display all cookies from array
+                var name,val;
+                for(var i=0;i<c_array.length;i++)
+                {
+                    name=c_array[i].split('=')[0];
+                    val=c_array[i].split('=')[1];
+                    document.write("Key is :"+name+"<br>"+"Value is :"+val+"<br>")
+                }
+            }
+        </script>
+        <input type="button" value="Submit Cookie" onclick="ReadCK()">
+    </body>
+</html>

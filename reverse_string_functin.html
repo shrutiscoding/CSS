@@ -1,0 +1,19 @@
+<html>
+    <title>Reversing String Using Function</title>
+    <head>
+        <script>
+            function rev_str(abc)
+            {
+                let x=abc;
+                for(let i=x.length-1;i>=0;i--)
+                {
+                    document.write(x[i]);
+                }
+            }
+            let str=prompt("Enter any String :")
+            </script>
+    </head>
+    <body>
+        <input type="button" value="Reverse String" onclick="rev_str(str)"/>
+    </body>
+</html>

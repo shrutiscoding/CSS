@@ -1,0 +1,77 @@
+<html>
+    <title>Regular Expression Validation</title>
+    <body>
+        <script>
+            function Pan()
+            {
+                var pan=prompt("Enter Pan Card Number:",0)
+                var reg=/^[A-Z]{5}[0-9]{4}[A-Z]$/
+                if(reg.test(pan))
+                {
+                    alert("You have entered valid Pan Card Number!!")
+                }
+                else
+                {
+                    alert("You have entered invalid Pan Card Number!!")
+                }
+            }
+            function Pin()
+            {
+                var pin=prompt("Enter Pincode:",0)
+                var reg=/^[4]{1}[0-9]{5}$/
+                if(reg.test(pin))
+                {
+                    alert("You have entered valid Pincode!!")
+                }
+                else
+                {
+                    alert("You have entered invalid Pincode!!")
+                }
+            }
+            function Adhar()
+            {
+                var adhar=prompt("Enter Adhar Card Number:",0)
+                var reg=/^[0-9]{12}$/
+                if(reg.test(adhar))
+                {
+                    alert("You have entered valid Adhar Card Number!!")
+                }
+                else
+                {
+                    alert("You have entered invalid Adhar Card Number!!")
+                }
+            }
+            function Mob()
+            {
+                var mob=prompt("Enter Mobile Number:",0)
+                var reg=/^[0-9]{10}$/
+                if(reg.test(mob))
+                {
+                    alert("You have entered valid Mobile Number!!")
+                }
+                else
+                {
+                    alert("You have entered invalid Mobile Number!!")
+                }
+            }
+            function Email()
+            {
+                var email=prompt("Enter Email Address:",0)
+                var reg=/^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,3}$/
+                if(reg.test(email))
+                {
+                    alert("You have entered valid Email Address!!")
+                }
+                else
+                {
+                    alert("You have entered invalid Email Address!!")
+                }
+            }
+        </script>
+        <input type="button" value="Pan Card Number" onclick="Pan()">
+        <input type="button" value="Pincode Number" onclick="Pin()">
+        <input type="button" value="Adhar Card Number" onclick="Adhar()">
+        <input type="button" value="Mobile Number" onclick="Mob()">
+        <input type="button" value="Email Address" onclick="Email()">
+    </body>
+</html>

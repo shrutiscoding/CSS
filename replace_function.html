@@ -1,0 +1,19 @@
+<html>
+    <title>Use of Replace Function</title>
+    <body>
+        <script>
+            document.write("<h1><center>Use of Replace Function</center></h1>")
+            
+            mystr="Good Morning ABC.Good Morning PQR"
+            document.write("<br>"+mystr)
+            reg=/Morning/i 
+            replace=mystr.replace(reg,"Afternoon")
+            document.write("<br>Output of replace:"+replace);
+
+            reg=/Morning/g 
+            replace=mystr.replace(reg,"Afternoon")
+            document.write("<br>Output of replace globally:"+replace);
+
+        </script>
+    </body>
+</html>

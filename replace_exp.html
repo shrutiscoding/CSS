@@ -1,0 +1,20 @@
+<html>
+    <title>Replace Regular Expression</title>
+    <body>
+        <script>
+            function myfunc()
+            {
+                var str="JS is a programming language.JS is an object based language."
+                var n=str.replace(/JS/i,"Javascript");
+                document.write("replace() :"+n+"<br>")
+
+                n=str.replaceAll("JS","Javascript")
+                document.write("replaceAll() :"+n+"<br>")
+
+                n=str.replace(/JS/g,"Javascript")
+                document.write("replace+g :"+n+"<br>")
+            }
+            myfunc()
+        </script>
+    </body>
+</html>

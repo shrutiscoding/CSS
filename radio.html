@@ -1,0 +1,27 @@
+<html>
+    <title>Check Student or Employee</title>
+    <body>
+        <form>
+            Name:<input type="text" id="name"><br>
+            <input type="radio" id="stud" name="des" value="I am a Student !!"/>Student<br>
+            <input type="radio" id="emp" name="des" value="I am an Employee !!"/>Employee<br>
+            <input type="button" onclick="check_design()" value="Check"/>
+        </form>
+        <script>
+            
+            var s=document.getElementById("stud")
+            var e=document.getElementById("emp")
+            function check_design()
+            {
+                if(s.checked==true)
+                {
+                    document.write("My name is "+document.getElementById("name").value+"<br>"+s.value)
+                }
+                if(e.checked==true)
+                {
+                    document.write("My name is "+document.getElementById("name").value+"<br>"+e.value)
+                }
+            }
+        </script>
+    </body>
+</html>

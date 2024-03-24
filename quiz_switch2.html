@@ -1,0 +1,38 @@
+<html>
+    <title>Quiz Topic Selection</title>
+    <body bgcolor=pink>
+        <script >
+            var quizCategory=prompt("Enter Category for your quiz");
+        switch (quizCategory) {
+    case "science":
+        document.write("<center><h3>Science Quiz:</h3><br><hr></center>");
+        document.write("1. What is the chemical symbol for water?");
+        document.write("<br>2. Which planet is known as the Red Planet?");
+        document.write("<br>3. What is the unit of measurement for force?");
+        break;
+    case "history":
+        document.write("<center><h3>History Quiz:<br></h3><hr></center>");
+        document.write("1. Who was the first president of the United States?");
+        document.write("<br>2. In which year did World War II end?");
+        document.write("<br>3. The ancient Egyptian writing system is called?");
+        break;
+    case "sports":
+        document.write("<h3>Sports Quiz:<br></h3><hr>");
+        document.write("1. Which sport is known as the 'king of sports'?");
+        document.write("<br>2. Which country won the FIFA World Cup in 2018?");
+        document.write("<br>3. In which city are the Summer Olympics 2020 held?");
+        break;
+    case "gk":
+        document.write("<h3>General Knowledge Quiz:<br></h3><hr>");
+        document.write("1. Who invented Watch?");
+        document.write("<br>2. Who is the real founder of Microsoft?");
+        document.write("<br>3. Name a natural satellite of Earth?");
+        break;
+    default:
+       document.write("Invalid quiz category.");
+        break;
+  }
+  document.write("<hr><center><h6>Thanks For Giving Quiz !!</h6></center>");
+  </script>
+    </body>
+  </html>

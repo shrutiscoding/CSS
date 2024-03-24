@@ -1,0 +1,31 @@
+<html>
+<head>
+
+
+
+<script language="javascript">
+	function MouseRollover(MyImage) {
+        MyImage.src = "download.jpeg";
+    }
+	function MouseOut(MyImage) {
+        MyImage.src = "download2.jpeg";
+    }
+    function MouseUp(MyImage)
+    {
+        MyImage.src="download1.jpeg"
+    }
+    function MouseDown(MyImage)
+    {
+        MyImage.src="download3.jpeg"
+    }
+</script>
+</head><body>
+
+<img src="download2.jpeg" border="1px" 
+width="350px" height="350px" 
+onMouseOver="MouseRollover(this)" 
+onMouseOut="MouseOut(this)" 
+onmouseup="MouseUp(this)"
+onmousedown="MouseDown(this)"/>
+</body>
+</html>
